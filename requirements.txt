@@ -1,0 +1,40 @@
+brotlipy==0.7.0
+certifi @ file:///C:/ci_311/certifi_1676421629969/work/certifi
+cffi @ file:///C:/ci_311/cffi_1676423759166/work
+chardet==5.1.0
+charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
+colorama==0.4.6
+cryptography @ file:///C:/ci_311/cryptography_1679419210767/work
+elastic-transport==8.4.0
+elasticsearch==8.7.0
+filelock==3.12.0
+fsspec==2023.5.0
+huggingface-hub==0.14.1
+idna @ file:///C:/ci_311/idna_1676424932545/work
+Jinja2 @ file:///C:/ci_311/jinja2_1676424968965/work
+kafka-python==2.0.2
+MarkupSafe @ file:///C:/ci_311/markupsafe_1676424152318/work
+mkl-fft==1.3.6
+mkl-random @ file:///C:/Users/dev-admin/mkl/mkl_random_1682977971003/work
+mkl-service==2.4.0
+mpmath==1.2.1
+networkx @ file:///C:/b/abs_b935xy_9g6/croot/networkx_1678964342510/work
+numpy @ file:///C:/Users/dev-admin/mkl/numpy_and_numpy_base_1682982345978/work
+packaging==23.1
+Pillow==9.4.0
+pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
+pyOpenSSL @ file:///C:/b/abs_de215ipd18/croot/pyopenssl_1678965319166/work
+PySocks @ file:///C:/ci_311/pysocks_1676425991111/work
+PyYAML==6.0
+regex==2023.5.5
+requests @ file:///C:/b/abs_41owkd5ymz/croot/requests_1682607524657/work
+sympy @ file:///C:/ci_311_rebuilds/sympy_1679009400182/work
+tokenizers==0.13.3
+torch==2.0.0
+torchaudio==2.0.1
+torchvision==0.15.1
+tqdm==4.65.0
+transformers==4.28.1
+typing_extensions @ file:///C:/b/abs_a1bb332wcs/croot/typing_extensions_1681939523095/work
+urllib3 @ file:///C:/b/abs_3ce53vrdcr/croot/urllib3_1680254693505/work
+win-inet-pton @ file:///C:/ci_311/win_inet_pton_1676425458225/work
