@@ -21,11 +21,11 @@ def crowling_from_page(page):
                 title = post.find("span", class_="list__title").text.strip()
                 nickname = post.find("span", class_="member-info__nickname").text.strip()
                 reg_date = post.find(class_="list__date").text.strip()
-                # "n시간 전" 으로 표기된 경우
+                # Convert "n시간 전" to "%Y-%m-%d" format 
                 if "시간" in reg_date:
                     h = int(reg_date.split("시간")[0])
                     reg_date = str(datetime.datetime.now() - datetime.timedelta(hours=int(h))).split(" ")[0]
-                # "n분 전" 으로 표기된 경우
+                # Convert "n분 전" to "%Y-%m-%d" format 
                 elif "분" in reg_date:
                     m = int(reg_date.split("분")[0])
                     reg_date = str(datetime.datetime.now() - datetime.timedelta(minutes=int(m))).split(" ")[0]
