@@ -10,7 +10,7 @@ producer = KafkaProducer(bootstrap_servers = brokers)
 topic = "board_data"
 
 # Data producer
-with open("./dataset/test.csv", "r", encoding="utf-8") as file:
+with open("./dataset/board_data.csv", "r", encoding="utf-8") as file:
     rows = csv.reader(file)
     # Skip the header row
     next(rows)
@@ -25,7 +25,7 @@ with open("./dataset/test.csv", "r", encoding="utf-8") as file:
         producer.send(topic=topic, value=json.dumps(new_data).encode("utf-8"))
         print(new_data)
         
-        # For random time data
-        t = random.randrange(1, 3) * 0.3
-        time.sleep(t)
+        # # For random time data
+        # t = random.randrange(1, 3) * 0.3
+        # time.sleep(t)
     

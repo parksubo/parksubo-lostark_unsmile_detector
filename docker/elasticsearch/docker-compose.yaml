@@ -2,6 +2,7 @@ version: '3.8'
 services:
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.16.3
+    mem_limit: 1g
     container_name: elasticsearch
     environment:
       - discovery.type=single-node
@@ -14,11 +15,13 @@ services:
   
   kibana:
     image: docker.elastic.co/kibana/kibana:7.16.3
+    mem_limit: 1g
     container_name: kibana
     ports:
       - 5601:5601
     environment:
       ELASTICSEARCH_URL: http://elasticsearch:9200
+
     networks:
       - elastic
 
@@ -28,3 +31,5 @@ networks:
 volumes:
   esdata:
     driver: local
+
+

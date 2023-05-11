@@ -35,11 +35,12 @@ producer = KafkaProducer(bootstrap_servers = brokers)
 for message in consumer:
     msg = json.loads(message.value.decode())
     result = baseline(msg["title"])
-    topic = CLEAN_DATA_TOPIC if result["label"] == "clean" else UNSMILE_DATA_TOPIC
-    # Add label, score data to msg
-    msg["label"] = result["label"]
-    msg["score"] = result["score"]
-    
-    producer.send(topic=topic, value=json.dumps(msg).encode("utf-8"))
-    print("Topic : " + topic, "/ Title : " + msg["title"], "/ Label : " + msg["label"])
+    if result:
+        topic = CLEAN_DATA_TOPIC if result["label"] == "clean" else UNSMILE_DATA_TOPIC
+        # Add label, score data to msg
+        msg["label"] = result["label"]
+        msg["score"] = result["score"]
+        
+        producer.send(topic=topic, value=json.dumps(msg).encode("utf-8"))
+        print("Topic : " + topic, "/ Title : " + msg["title"], "/ Label : " + msg["label"])
     
