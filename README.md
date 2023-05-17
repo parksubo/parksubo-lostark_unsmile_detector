@@ -9,7 +9,7 @@
         - 닉네임, 제목, 등록일의 데이터 포함한 데이터셋 추출
             - 컴퓨터 자원 문제로 인해 15000개의 데이터 셋이서 구간별로 뽑은 약 3300개의 데이터셋만을 활용
     - (b) - kafka producer에서 smilegate-ai(baseline) 모델을 사용하여 특정 채팅 유형 검사
-        - Docker 환경에서 kafka와 zookeeper 사용에서 AWS EC2 환경으로 아키텍쳐 변경
+        - Docker 환경에서 kafka와 zookeeper 사용에서 AWS EC2 환경으로 아키텍쳐 변경 [링크](https://subo0521.tistory.com/200)
         - score가 0.5 이상인 label을 해당 게시글의 유형으로 판단
             - label이 clean일 경우 CLEAN_DATA_TOPIC, label이 clean이 아닐 경우 UNSMILE_DATA_TOPIC으로 구분
         - 토픽별로 consumer를 설정
