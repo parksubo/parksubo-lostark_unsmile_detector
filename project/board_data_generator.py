@@ -36,7 +36,7 @@ def crowling_from_page(page):
                 
     return data
 
-# 한 페이지당 15개의 데이터 생성
+# generate 15 data per page
 def board_data_generator(n, path):
     data = []
     for i in range(1, n + 1):
