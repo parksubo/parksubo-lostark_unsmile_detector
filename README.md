@@ -1,9 +1,9 @@
 # parksubo-lostark_unsmile_detector
 
-# 아키텍쳐
+## 아키텍쳐
 ![image](https://github.com/parksubo/parksubo-lostark_unsmile_detector/assets/33623096/12ff2aa5-0f4a-46a6-8f6b-00f7cd126f14)
 
-# 프로젝트 요약
+## 프로젝트 요약
 - Smilegate의 오픈소스 AI 및 LostArk 자유게시판 데이터를 이용한 악성 게시글 검출
     - (a) - 로스트아크 자유게시판의 데이터를 크롤링하여 데이터셋 생성
         - 닉네임, 제목, 등록일의 데이터 포함한 데이터셋 추출
