@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup
 import datetime
 import pandas as pd
 import mysql.connector
+import time
+
 
 def crowling():
     url = f"https://lostark.game.onstove.com/Community/Free/List?page={1}&searchtype=0&searchtext=&ordertype=latest&category=0"
@@ -25,11 +27,13 @@ def crowling():
                 if "시간" in reg_date:
                     h = int(reg_date.split("시간")[0])
                     reg_date = str(datetime.datetime.now() + datetime.timedelta(hours=9) - datetime.timedelta(hours=int(h))).split(" ")[0]
-                
                 # Convert "n분 전" to "%Y-%m-%d" format, add 9h for KST
                 elif "분" in reg_date:
                     m = int(reg_date.split("분")[0])
                     reg_date = str(datetime.datetime.now() + datetime.timedelta(hours=9) - datetime.timedelta(minutes=int(m))).split(" ")[0]
+                # Convert "방금 전" to "%Y-%m-%d" format, add 9h for KST
+                elif "분" in reg_date:
+                    reg_date = str(datetime.datetime.now() + datetime.timedelta(hours=9)).split(" ")[0]
                 else:
                     reg_date = reg_date.replace(".", "-")
                 
@@ -61,6 +65,7 @@ def load_data_to_mysql():
         query = "INSERT INTO board_data (nickname, title, reg_date) VALUES (%s, %s, %s)"
         cursor.execute(query, values)
         conn.commit()
+        print("데이터 삽입")
 
     # Close the cursor and connection
     cursor.close()
@@ -68,7 +73,9 @@ def load_data_to_mysql():
     
     return
 
-
 # Main
 if __name__=="__main__":
-    load_data_to_mysql()
+    while True:
+        load_data_to_mysql()
+        # per 10 sec
+        time.sleep(10)
