@@ -45,7 +45,7 @@ def load_data_to_mysql():
     conn = mysql.connector.connect(
         host="0.0.0.0",
         user="root",
-        password="Tnqh0521!",
+        password="password",
         database="lostark_raw_data"
     )
 
