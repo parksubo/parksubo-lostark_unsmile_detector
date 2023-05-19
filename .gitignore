@@ -1,5 +1,5 @@
 docker/kafka/data
 logs/
-project/dataset
+project/docker/dataset
 
 **/__pycache__/

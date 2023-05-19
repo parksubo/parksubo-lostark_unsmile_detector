@@ -5,7 +5,6 @@ import pandas as pd
 import mysql.connector
 import time
 
-
 def crowling():
     url = f"https://lostark.game.onstove.com/Community/Free/List?page={1}&searchtype=0&searchtext=&ordertype=latest&category=0"
     response = requests.get(url)
@@ -32,7 +31,7 @@ def crowling():
                     m = int(reg_date.split("분")[0])
                     reg_date = str(datetime.datetime.now() + datetime.timedelta(hours=9) - datetime.timedelta(minutes=int(m))).split(" ")[0]
                 # Convert "방금 전" to "%Y-%m-%d" format, add 9h for KST
-                elif "분" in reg_date:
+                elif "방금" in reg_date:
                     reg_date = str(datetime.datetime.now() + datetime.timedelta(hours=9)).split(" ")[0]
                 else:
                     reg_date = reg_date.replace(".", "-")
@@ -45,7 +44,7 @@ def load_data_to_mysql():
     conn = mysql.connector.connect(
         host="0.0.0.0",
         user="root",
-        password="password",
+        password="Tnqh0521!",
         database="lostark_raw_data"
     )
 
@@ -77,5 +76,5 @@ def load_data_to_mysql():
 if __name__=="__main__":
     while True:
         load_data_to_mysql()
-        # per 10 sec
-        time.sleep(10)
+        # per 30 sec
+        time.sleep(30)

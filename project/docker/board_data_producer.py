@@ -1,6 +1,4 @@
 from kafka import KafkaProducer
-import time
-import random
 import csv
 import json
 
@@ -25,7 +23,3 @@ with open("./dataset/board_data.csv", "r", encoding="utf-8") as file:
         producer.send(topic=topic, value=json.dumps(new_data).encode("utf-8"))
         print(new_data)
         
-        # # For random time data
-        # t = random.randrange(1, 3) * 0.3
-        # time.sleep(t)
-    
