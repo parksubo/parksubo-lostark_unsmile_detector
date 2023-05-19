@@ -1,15 +1,15 @@
 # parksubo-lostark_unsmile_detector
 
 # 아키텍쳐
-![image](https://github.com/parksubo/parksubo-lostark_unsmile_detector/assets/33623096/35e34e29-f53e-4961-89ed-932003e645a2)
+![image](https://github.com/parksubo/parksubo-lostark_unsmile_detector/assets/33623096/c013815c-79a6-4413-8695-7c048689bce3)
 
 # 프로젝트 요약
 - Smilegate의 오픈소스 AI 및 LostArk 자유게시판 데이터를 이용한 악성 게시글 검출
     - (a) - 로스트아크 자유게시판의 데이터를 크롤링하여 데이터셋 생성
         - 닉네임, 제목, 등록일의 데이터 포함한 데이터셋 추출
-            - 컴퓨터 자원 문제로 인해 15000개의 데이터 셋이서 구간별로 뽑은 약 3300개의 데이터셋만을 활용
+            - AWS에서 MySQL 서버를 설치하여 실시간 데이터 크롤링을 통해 MySQL에 데이터 적재
     - (b) - kafka producer에서 smilegate-ai(baseline) 모델을 사용하여 특정 채팅 유형 검사
-        - Docker 환경에서 kafka와 zookeeper 사용에서 AWS EC2 환경으로 아키텍쳐 변경 [링크](https://subo0521.tistory.com/200)
+        - Docker 환경에서 kafka와 zookeeper 사용에서 AWS EC2 환경으로 아키텍쳐 변경
         - score가 0.5 이상인 label을 해당 게시글의 유형으로 판단
             - label이 clean일 경우 CLEAN_DATA_TOPIC, label이 clean이 아닐 경우 UNSMILE_DATA_TOPIC으로 구분
         - 토픽별로 consumer를 설정
