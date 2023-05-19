@@ -20,3 +20,7 @@
             - 날짜별 악성 게시글 갯수에 Area 라인차트
             - 악성 게시글 유형에 대한 막대차트
             - unsmile score 분포에 대한 라인차트
+
+
+# AWS 환경 설정 링크
+https://subo0521.tistory.com/200
