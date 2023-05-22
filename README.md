@@ -22,9 +22,9 @@
             - unsmile score 분포에 대한 라인차트
 
 ## AWS 환경 설정 링크
-https://subo0521.tistory.com/200
-https://subo0521.tistory.com/202
-https://subo0521.tistory.com/203
+- https://subo0521.tistory.com/200
+- https://subo0521.tistory.com/202
+- https://subo0521.tistory.com/203
 
 ### 사용 기술
 - Python
