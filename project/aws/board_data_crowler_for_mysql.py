@@ -41,10 +41,16 @@ def crowling():
     return 
 
 def load_data_to_mysql():
+    # Read MySQL user info
+    with open("./user.txt", "r", encoding="utf-8") as file:
+        line = file.readline()
+        user, password = line.split(",")
+
+    # Connect MySQL
     conn = mysql.connector.connect(
-        host="0.0.0.0",
-        user="root",
-        password="Tnqh0521!",
+        host="mysql-server",
+        user=user,
+        password=password,
         database="lostark_raw_data"
     )
 
