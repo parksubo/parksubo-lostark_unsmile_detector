@@ -2,9 +2,9 @@
 
 ## 아키텍쳐
 - Docker
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9384944e-0ae5-4098-8048-55b1e9cb84fb/Untitled.png)
+![image](https://github.com/parksubo/parksubo-lostark_unsmile_detector/assets/33623096/39306570-5619-47a2-adc5-78c817233968)
 - AWS
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4d36739f-c110-4a63-9e5e-cbe3cc7b1aa0/Untitled.png)
+![image](https://github.com/parksubo/parksubo-lostark_unsmile_detector/assets/33623096/cdff4990-dca7-4b34-9a96-b54cf55acaae)
 
 
 ## 프로젝트 요약
