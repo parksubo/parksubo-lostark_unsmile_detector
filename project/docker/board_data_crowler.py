@@ -49,7 +49,5 @@ def board_data_generator(n, path):
     return
 
     
-if __name__=="__main__":
-    path = "./board_data/board_data.csv"
-    board_data_generator(1000, path)
+board_data_generator(200, path)
     
