@@ -25,7 +25,7 @@
             - 악성 게시글 유형에 대한 막대차트
             - unsmile score 분포에 대한 라인차트
             - 데이터 시각화 (예시를 위해 약 3300개의 데이터셋을 기간별로 랜덤으로 크롤링하여 수집)
-            - ![image](https://github.com/parksubo/parksubo-lostark_unsmile_detector/assets/33623096/54280915-40f1-4d47-b06b-af46a69cdba6)
+            ![image](https://github.com/parksubo/parksubo-lostark_unsmile_detector/assets/33623096/54280915-40f1-4d47-b06b-af46a69cdba6)
 
 
 
